@@ -54,6 +54,9 @@ export function SiteHeader() {
             <a href="#desk" className="opacity-80 transition hover:opacity-100">
               {d.navDesk}
             </a>
+            <a href="#evidence" className="opacity-80 transition hover:opacity-100">
+              {d.navProof}
+            </a>
             <a href="#wallet" className="opacity-80 transition hover:opacity-100">
               {d.navWallet}
             </a>

@@ -45,14 +45,35 @@ export type Dict = {
   heroTitle: string;
   heroLead: string;
   ctaStart: string;
+  ctaJury: string;
   ctaAbout: string;
   ctaSource: string;
+  juryStripWhat: string;
+  juryStripWhatBody: string;
+  juryStripProof: string;
+  juryStripProofBody: string;
+  juryStripHash: string;
+  juryStripHashBody: string;
+  moreTools: string;
+  moreToolsHint: string;
+  receiptTitle: string;
+  receiptId: string;
+  receiptHash: string;
+  callHash: string;
+  copyProof: string;
+  proofCopied: string;
+  verifyProof: string;
+  verifyOk: string;
+  verifyFail: string;
+  trustNoteLabel: string;
+  flagsLabel: string;
   step1Title: string;
   step1Body: string;
   step2Title: string;
   step2Body: string;
   step3Title: string;
   step3Body: string;
+  navProof: string;
   deskEyebrow: string;
   deskTitle: string;
   promptLabel: string;
@@ -143,22 +164,42 @@ const en: Dict = {
   walletNotFound: "Not installed",
   walletInstall: "Install",
   walletConnected: "Wallet connected",
-  publicDemo: "Public product demo",
+  publicDemo: "Evidence-first Solana desk",
   heroTitle: "Solana Agent Desk",
   heroLead:
-    "A clear builder console for Solana. Type a request or tap a tool, fetch live network data, and keep every RPC call visible as evidence.",
-  ctaStart: "Start on the desk",
+    "Not another agent toolkit. One jury path: run a live briefing, then audit method, params, endpoint, response sample — and a SHA-256 receipt that binds the pack.",
+  ctaStart: "Run with evidence",
+  ctaJury: "Run jury demo (60s)",
   ctaAbout: "About the builder",
   ctaSource: "View source",
+  juryStripWhat: "1. What",
+  juryStripWhatBody: "One network briefing against Solana RPC.",
+  juryStripProof: "2. Proof",
+  juryStripProofBody: "Every call leaves method, params, endpoint, status, sample.",
+  juryStripHash: "3. Hash",
+  juryStripHashBody: "SHA-256 per call + receipt hash — rewrite-detectable.",
+  moreTools: "More tools",
+  moreToolsHint: "Optional. Jury path only needs the demo button above.",
+  receiptTitle: "Signed evidence receipt",
+  receiptId: "Run ID",
+  receiptHash: "Receipt hash",
+  callHash: "Call hash",
+  copyProof: "Copy proof pack",
+  proofCopied: "Proof copied",
+  verifyProof: "Verify hashes locally",
+  verifyOk: "Verified — hashes match the sealed payloads.",
+  verifyFail: "Mismatch — proof pack does not verify.",
+  trustNoteLabel: "Trust point",
+  flagsLabel: "Edge flags",
   step1Title: "Ask or choose a tool",
   step1Body:
-    "Write a plain request, or use the labeled buttons for briefing, health checks, providers, and accounts.",
-  step2Title: "Run against Solana",
+    "Plain-language request or labeled tools — briefing, health, providers, accounts. The point is not more actions; it is a trail you can inspect.",
+  step2Title: "Hit live Solana",
   step2Body:
-    "The desk calls live RPC. Optional private keys for RPC Fast, Solami, or Panta stay on the server.",
+    "Live RPC runs on the server. Optional provider keys stay off the evidence panel.",
   step3Title: "Keep the evidence",
   step3Body:
-    "Each run stores the method, parameters, endpoint, status, and a response sample you can inspect.",
+    "This is the product: method, parameters, endpoint, status, response sample, and SHA-256 hashes.",
   deskEyebrow: "Desk",
   deskTitle: "Run a request",
   promptLabel: "What do you want to check?",
@@ -166,6 +207,7 @@ const en: Dict = {
   runDesk: "Run desk tools",
   running: "Running…",
   toolManifest: "Open tool manifest",
+  navProof: "PROOF",
   groupNetwork: "Network status",
   groupNetworkHint: "Core Solana reads",
   groupProviders: "Provider pulses",
@@ -183,17 +225,17 @@ const en: Dict = {
   chipPantaMarkets: "Panta markets",
   chipBalance: "System program balance",
   chipActivity: "Recent wallet activity",
-  productTitle: "What this product is",
-  productBuilder: "A builder desk",
+  productTitle: "Why this is different",
+  productBuilder: "Not SAK / Orquestra / Helius",
   productBuilderBody:
-    ", not a trading bot. Status reads, provider pulses, and wallet prepare with proof.",
-  productEvidence: "Evidence first",
+    ". Those optimize for more on-chain actions. We optimize for auditable agent+RPC work.",
+  productEvidence: "Evidence + hash is the product",
   productEvidenceBody:
-    ". Every run keeps the method, parameters, RPC URL, and a response sample.",
-  productAgent: "Agent ready",
-  productAgentBody: ". Other agents can load the same tools from /api/tools.",
+    ". Method, params, endpoint, sample, edge flags, and a receipt hash you can re-check in the browser.",
+  productAgent: "Same tools for agents",
+  productAgentBody: ". Load /api/tools — humans still see the sealed proof.",
   productNote:
-    "Public demo uses Solana mainnet when reachable. Optional provider keys never appear in the evidence panel.",
+    "Trust point: the desk server still runs the calls. Hashes make a silent rewrite of the evidence panel detectable. Secrets never appear in the pack.",
   walletEyebrow: "Wallet",
   walletTitle: "Prepare, sign, confirm",
   walletLead:
@@ -211,22 +253,22 @@ const en: Dict = {
   blockhash: "Blockhash",
   confirmation: "Confirmation",
   openExplorer: "Open in explorer",
-  outputEyebrow: "Output",
-  outputTitle: "Result and evidence",
-  nothingYet: "Nothing yet. Use Run desk tools or tap a labeled tool above.",
+  outputEyebrow: "Proof",
+  outputTitle: "Result, evidence, receipt",
+  nothingYet: "Nothing yet. Tap Run jury demo — or run a tool below.",
   contacting: "Contacting Solana…",
   evidence: "RPC call evidence",
   aboutEyebrow: "About",
   aboutTitle: "Built by KutluhanETH",
   aboutP1:
-    "I am a TypeScript and Solana focused builder based in Turkey, working remotely. I ship public product surfaces with live network evidence, wallet prepare and receipts, and reviewable upstream contributions.",
+    "TypeScript and Solana builder in Turkey. I ship public desks with live network evidence and reviewable upstream work.",
   aboutP2:
-    "Solana Agent Desk is my Colosseum Crypto World's Fair and Superteam TR project: an open agent desk so builders can ask for network status, run provider pulses, and prove every RPC hop instead of trusting a black box.",
+    "Solana Agent Desk is my Colosseum / Superteam TR project: prove every RPC hop instead of trusting a black box.",
   aboutP3:
-    "Beyond this desk I contribute reviewable pull requests on Circle Arc and Miden, and ship adjacent agent tooling. I am open to remote full-time, contract, and freelance Solana or TypeScript product work.",
+    "Also shipping reviewable PRs on Circle Arc and Miden. Open to remote Solana / TypeScript roles.",
   contactTitle: "Contact",
   contactLead:
-    "Reach out for product roles, collaborations, or feedback on the desk.",
+    "Product roles, collaborations, or feedback on the desk.",
   openX: "Open X profile",
   openTelegram: "Open Telegram",
   openGitHub: "GitHub · kutluhaneth46",
@@ -255,12 +297,33 @@ const tr: Dict = {
   walletNotFound: "Yüklü değil",
   walletInstall: "Yükle",
   walletConnected: "Cüzdan bağlandı",
-  publicDemo: "Herkese açık ürün demosu",
+  publicDemo: "Evidence-first Solana masası",
   heroLead:
-    "Solana için net bir builder konsolu. İstek yaz veya araç seç, canlı ağ verisini çek ve her RPC çağrısını kanıt olarak gör.",
-  ctaStart: "Masaya başla",
+    "Başka bir agent toolkit değil. Tek jüri yolu: canlı brifing çalıştır, method/params/endpoint/yanıt örneğini denetle — paketi bağlayan SHA-256 receipt ile.",
+  ctaStart: "Kanıtla çalıştır",
+  ctaJury: "Jüri demosu (60 sn)",
   ctaAbout: "Geliştirici hakkında",
   ctaSource: "Kaynağı gör",
+  juryStripWhat: "1. Ne",
+  juryStripWhatBody: "Solana RPC’ye karşı tek network briefing.",
+  juryStripProof: "2. Kanıt",
+  juryStripProofBody: "Her çağrı method, params, endpoint, status, sample bırakır.",
+  juryStripHash: "3. Hash",
+  juryStripHashBody: "Çağrı başına SHA-256 + receipt hash — sessiz rewrite tespit edilir.",
+  moreTools: "Diğer araçlar",
+  moreToolsHint: "İsteğe bağlı. Jüri yolu için yukarıdaki demo yeterli.",
+  receiptTitle: "İmzalı evidence receipt",
+  receiptId: "Run ID",
+  receiptHash: "Receipt hash",
+  callHash: "Çağrı hash",
+  copyProof: "Kanıt paketini kopyala",
+  proofCopied: "Kanıt kopyalandı",
+  verifyProof: "Hash’leri yerelde doğrula",
+  verifyOk: "Doğrulandı — hash’ler sealed payload ile uyuşuyor.",
+  verifyFail: "Uyuşmazlık — kanıt paketi doğrulanmadı.",
+  trustNoteLabel: "Trust point",
+  flagsLabel: "Edge bayrakları",
+  navProof: "KANIT",
   step1Title: "Sor veya araç seç",
   step1Body:
     "Düz bir istek yaz veya brifing, sağlık, sağlayıcı ve hesap düğmelerini kullan.",
@@ -269,7 +332,7 @@ const tr: Dict = {
     "Masa canlı RPC çağırır. RPC Fast, Solami veya Panta anahtarları sunucuda kalır.",
   step3Title: "Kanıtı sakla",
   step3Body:
-    "Her çalıştırma yöntem, parametre, uç nokta, durum ve yanıt örneğini saklar.",
+    "Method, parametre, uç, durum, yanıt örneği ve SHA-256 hash’ler.",
   deskEyebrow: "Masa",
   deskTitle: "İstek çalıştır",
   promptLabel: "Ne kontrol etmek istiyorsun?",
@@ -290,17 +353,17 @@ const tr: Dict = {
   chipBlockhash: "Son blockhash",
   chipBalance: "System program bakiyesi",
   chipActivity: "Son cüzdan aktivitesi",
-  productTitle: "Bu ürün nedir",
-  productBuilder: "Bir builder masası",
+  productTitle: "Neden farklı",
+  productBuilder: "SAK / Orquestra / Helius değil",
   productBuilderBody:
-    "; trading bot değil. Durum okumaları, sağlayıcı nabızları ve kanıtlı cüzdan hazırlığı.",
-  productEvidence: "Önce kanıt",
+    ". Onlar daha fazla on-chain aksiyon için. Biz denetlenebilir agent+RPC işi için.",
+  productEvidence: "Ürün = kanıt + hash",
   productEvidenceBody:
-    ". Her çalıştırma yöntem, parametre, RPC URL ve yanıt örneğini tutar.",
-  productAgent: "Ajan hazır",
-  productAgentBody: ". Diğer ajanlar aynı araçları /api/tools üzerinden yükleyebilir.",
+    ". Method, params, endpoint, sample, edge bayrakları ve tarayıcıda yeniden kontrol edilebilen receipt hash.",
+  productAgent: "Aynı araçlar ajanlar için",
+  productAgentBody: ". Manifest /api/tools — insan yine sealed kanıtı görür.",
   productNote:
-    "Herkese açık demo erişilebilirse Solana mainnet kullanır. Sağlayıcı anahtarları kanıt panelinde görünmez.",
+    "Trust point: çağrıları hâlâ desk sunucusu üretir. Hash, evidence panelinin sessizce değiştirilmesini tespit eder. Sırlar pakette görünmez.",
   walletEyebrow: "Cüzdan",
   walletTitle: "Hazırla, imzala, onayla",
   walletLead:
@@ -317,19 +380,19 @@ const tr: Dict = {
   networkFee: "Ağ ücreti",
   confirmation: "Onay",
   openExplorer: "Explorerda aç",
-  outputEyebrow: "Çıktı",
-  outputTitle: "Sonuç ve kanıt",
-  nothingYet: "Henüz yok. Masa araçlarını çalıştır veya yukarıdan bir araç seç.",
+  outputEyebrow: "Kanıt",
+  outputTitle: "Sonuç, kanıt, receipt",
+  nothingYet: "Henüz yok. Jüri demosuna bas — veya aşağıdan araç çalıştır.",
   contacting: "Solana ile iletişim…",
   evidence: "RPC çağrı kanıtı",
   aboutEyebrow: "Hakkında",
   aboutTitle: "KutluhanETH tarafından",
   aboutP1:
-    "Türkiye merkezli, uzaktan çalışan TypeScript ve Solana odaklı bir builderım. Canlı ağ kanıtı, cüzdan hazırlığı ve incelenebilir upstream katkılarla herkese açık ürün yüzeyleri yayınlıyorum.",
+    "Türkiye’de TypeScript ve Solana builder’ı. Canlı ağ kanıtlı public masa ve reviewable upstream iş çıkarıyorum.",
   aboutP2:
-    "Solana Agent Desk, Colosseum Crypto World's Fair ve Superteam TR projem: builderların ağ durumu sorup sağlayıcı nabızları çalıştırabildiği ve her RPC adımını kanıtlayabildiği açık bir ajan masası.",
+    "Solana Agent Desk, Colosseum / Superteam TR projem: her RPC hop’u kara kutu yerine kanıtla.",
   aboutP3:
-    "Bu masanın ötesinde Circle Arc ve Miden üzerinde incelenebilir PR'lar açıyor, yan ajan araçları da üretiyorum. Uzaktan tam zamanlı, sözleşme veya freelance Solana / TypeScript ürün işine açığım.",
+    "Circle Arc ve Miden’de reviewable PR’lar da var. Uzaktan Solana / TypeScript rollerine açığım.",
   contactTitle: "İletişim",
   contactLead:
     "Ürün rolleri, işbirliği veya masa geri bildirimi için yaz.",
@@ -359,10 +422,10 @@ const ru: Dict = {
   walletNotFound: "Не установлен",
   walletInstall: "Установить",
   walletConnected: "Кошелёк подключён",
-  publicDemo: "Публичное демо",
+  publicDemo: "Evidence-first Solana desk",
   heroLead:
-    "Понятная builder-консоль для Solana. Напишите запрос или выберите инструмент, получите живые данные сети и сохраните каждый RPC-вызов как доказательство.",
-  ctaStart: "Открыть desk",
+    "Не очередной agent toolkit. Evidence desk: каждый вызов оставляет method, params, provider и sample ответа — судья или builder проверяет, а не верит чёрному ящику.",
+  ctaStart: "Запуск с evidence",
   ctaAbout: "О разработчике",
   ctaSource: "Исходный код",
   step1Title: "Спросите или выберите инструмент",
@@ -462,10 +525,10 @@ const zh: Dict = {
   walletNotFound: "未安装",
   walletInstall: "安装",
   walletConnected: "钱包已连接",
-  publicDemo: "公开产品演示",
+  publicDemo: "Evidence-first Solana desk",
   heroLead:
-    "清晰的 Solana 构建者控制台。输入请求或点选工具，获取实时网络数据，并把每次 RPC 调用保留为证据。",
-  ctaStart: "开始使用",
+    "不是又一个 agent 工具包。这是证据工作台：每次调用留下 method、params、provider 与响应样本，评审或构建者可审计，而不是信任黑盒。",
+  ctaStart: "带证据运行",
   ctaAbout: "关于作者",
   ctaSource: "查看源码",
   step1Title: "提问或选择工具",
@@ -558,10 +621,10 @@ const ar: Dict = {
   walletNotFound: "غير مثبتة",
   walletInstall: "تثبيت",
   walletConnected: "تم ربط المحفظة",
-  publicDemo: "عرض عام للمنتج",
+  publicDemo: "Evidence-first Solana desk",
   heroLead:
-    "وحدة تحكم واضحة لبناة Solana. اكتب طلباً أو اختر أداة، اجلب بيانات الشبكة الحية، واحتفظ بكل استدعاء RPC كدليل.",
-  ctaStart: "ابدأ من المكتب",
+    "ليست مجموعة أدوات وكيل أخرى. مكتب أدلة: كل استدعاء يترك method وparams وprovider وعيّنة استجابة يمكن للجنة أو البنّاء تدقيقها بدل الثقة بصندوق أسود.",
+  ctaStart: "شغّل مع الدليل",
   ctaAbout: "عن المطوّر",
   ctaSource: "عرض المصدر",
   step1Title: "اسأل أو اختر أداة",
@@ -661,10 +724,10 @@ const fr: Dict = {
   walletNotFound: "Non installé",
   walletInstall: "Installer",
   walletConnected: "Portefeuille connecté",
-  publicDemo: "Démo produit publique",
+  publicDemo: "Evidence-first Solana desk",
   heroLead:
-    "Une console claire pour les builders Solana. Écrivez une demande ou choisissez un outil, récupérez les données réseau en direct et gardez chaque appel RPC comme preuve.",
-  ctaStart: "Ouvrir le bureau",
+    "Pas un toolkit d’agent de plus. Un evidence desk : chaque appel laisse method, params, provider et un échantillon de réponse qu’un jury ou un builder peut auditer.",
+  ctaStart: "Lancer avec preuves",
   ctaAbout: "À propos du builder",
   ctaSource: "Voir le code",
   step1Title: "Demandez ou choisissez un outil",
@@ -765,10 +828,10 @@ const es: Dict = {
   walletNotFound: "No instalada",
   walletInstall: "Instalar",
   walletConnected: "Billetera conectada",
-  publicDemo: "Demo pública del producto",
+  publicDemo: "Evidence-first Solana desk",
   heroLead:
-    "Una consola clara para builders de Solana. Escribe una solicitud o elige una herramienta, obtén datos de red en vivo y conserva cada llamada RPC como evidencia.",
-  ctaStart: "Empezar en el desk",
+    "No es otro toolkit de agentes. Un evidence desk: cada llamada deja method, params, provider y una muestra de respuesta que un juez o builder puede auditar.",
+  ctaStart: "Ejecutar con evidencia",
   ctaAbout: "Sobre el builder",
   ctaSource: "Ver código",
   step1Title: "Pregunta o elige una herramienta",
@@ -869,10 +932,10 @@ const az: Dict = {
   walletNotFound: "Quraşdırılmayıb",
   walletInstall: "Quraşdır",
   walletConnected: "Cüzdan bağlandı",
-  publicDemo: "İctimai məhsul demosu",
+  publicDemo: "Evidence-first Solana masası",
   heroLead:
-    "Solana üçün aydın builder konsolu. Sorğu yaz və ya alət seç, canlı şəbəkə məlumatını götür və hər RPC çağırışını sübut kimi saxla.",
-  ctaStart: "Masaya başla",
+    "Başqa bir agent toolkit deyil. Evidence masa: hər çağırış method, params, provider və cavab nümunəsi buraxır — münsif və ya builder qara qutu əvəzinə yoxlayır.",
+  ctaStart: "Sübutla işlət",
   ctaAbout: "Builder haqqında",
   ctaSource: "Mənbəyə bax",
   step1Title: "Sor və ya alət seç",
