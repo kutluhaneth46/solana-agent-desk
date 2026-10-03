@@ -523,8 +523,8 @@ export default function Home() {
                 className="cursor-pointer list-none text-sm font-semibold"
                 style={{ color: "var(--ink)" }}
               >
-                {d.moreTools}
-                <span className="ml-2 text-xs font-normal" style={{ color: "var(--muted)" }}>
+                {d.moreTools}.{" "}
+                <span className="text-xs font-normal" style={{ color: "var(--muted)" }}>
                   {d.moreToolsHint}
                 </span>
               </summary>

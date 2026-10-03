@@ -32,7 +32,7 @@ export type RunReceipt = {
 const SAMPLE_MAX = 2000;
 
 const TRUST_NOTE =
-  "Hashes bind method, params, endpoint label, status, and response sample for this run. The desk server still produces the receipt — the hash makes silent rewrite of the evidence panel detectable.";
+  "Hashes bind method, params, endpoint label, status, and response sample for this run. The desk server still produces the receipt. The hash makes a silent rewrite of the evidence panel detectable.";
 
 export function stableStringify(value: unknown): string {
   return JSON.stringify(sortKeys(value));

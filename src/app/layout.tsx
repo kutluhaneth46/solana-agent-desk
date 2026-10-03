@@ -5,17 +5,17 @@ import { I18nProvider } from "@/components/I18nContext";
 import { WalletProvider } from "@/components/WalletContext";
 
 export const metadata: Metadata = {
-  title: "Solana Agent Desk | KutluhanETH",
+  title: "Solana Agent Desk | Evidence first Solana desk",
   description:
-    "Public Solana agent desk by KutluhanETH. Plain-language prompts, live RPC tools, wallet prepare with evidence, and MCP tool discovery.",
+    "Not another agent toolkit. An evidence desk for Solana: every tool call leaves method, params, provider, and a response sample you can audit.",
   icons: {
     icon: [{ url: "/favicon.svg", type: "image/svg+xml" }],
     apple: [{ url: "/logo.svg" }],
   },
   openGraph: {
-    title: "Solana Agent Desk",
+    title: "Solana Agent Desk, evidence first",
     description:
-      "Ask in plain language. Run Solana network tools. Inspect every RPC call.",
+      "Every RPC and agent call leaves auditable evidence. Not a black box toolkit.",
     type: "website",
     images: [{ url: "/logo.png" }],
   },
